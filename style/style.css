@@ -1,0 +1,7 @@
+@charset "UTF-8";
+body{margin: 0; padding: 0;}
+.clear{clear: both;}
+#console{ width: 95%; height: 300px; border: 1px solid gray; margin: 5px auto; overflow: auto; padding: 2%;  }
+#console .out{border: 1px dashed gray};
+#console .out .left  {float: left; width: 30%;}
+#console .out .right{float: left; width: 69%; margin-left: 1%;}

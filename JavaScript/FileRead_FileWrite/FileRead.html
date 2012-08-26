@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>FileRead</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="/style/style.css" rel="stylesheet">
+<script type="text/javascript" src="/JavaScript/jquery.js"></script>
+<script type="text/javascript" src="/JavaScript/common.js"></script>
+<script type="text/javascript" src="fun.js"></script>
+
+</head>
+<body>
+<p><input type="button" onclick="openFile()"  value="open file"/><input style="position: absolute;left: -10000px;" id="file" type="file" onchange="javascript:readFile(this.files[0])"  /></p>
+
+<div id="console">
+</div>
+
+</body>
+</html>
