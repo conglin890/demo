@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-8-5 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/kendo.min.css"/>
+        <script src="js/jQuery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/kendo.core.min.js"></script>
+        <script src="js/kendo.upload.min.js"></script>
+        <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Tenancy Application Form</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+        <!-- ui-progress-bar -->
+        <div class="ui-progress-bar" id="js-progress-bar">
+            <ul>
+                <li class="ui-progress-passed">1) <a href="step-8.html">PERSONAL DETAILS</a></li>
+                <li class="ui-progress-passed">2) <a href="step-8-2.html">LEASE DETAILS </a></li>
+                <li class="ui-progress-passed">3) <a href="step-8-3.html">PROPERTY HISTORY</a></li>
+                <li class="ui-progress-passed">4) <a href="step-8-4.html">EMPLOYMENT INFORMATION </a></li>
+                <li class="ui-progress-bar-curr ui-progress-bar-flag">5) REFERENCES</li>
+                <li>6) CONNECTION SERVICES</li>
+            </ul>
+            <div class="ui-progress-bar-rule"></div>
+        </div>
+        <!-- // -->
+        <form action="step-8-6.html" method="post" id="form-main">
+
+            <h3>REFERENCE 1:</h3>
+
+            <div class="form-row fn-clear">
+                <label class="form-row-cell ">
+                    <span>First Name</span>
+                    <input type="text" class="input icon-name">
+                </label>
+
+                <label class="form-row-cell ">
+                    <span>Last Name</span>
+                    <input type="text" class="input icon-name">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Occupation</span>
+                    <input type="text" class="input ">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+                <label class="form-row-cell ">
+                    <span>Phone</span>
+                    <input type="text" class="input icon-phone">
+                </label>
+
+                <label class="form-row-cell ">
+                    <span>Email</span>
+                    <input type="text" class="input icon-email">
+                </label>
+            </div>
+
+            <p class="hightLight">Please be advised that these references/referees must not be related to you as the applicant.</p>
+            
+            <div class="section">
+
+            <h3>UPLOAD REFERENCE: <span onclick="on_Off($(this))" class="ui-switch"></span></h3>
+
+            <div>
+            	<p  class="hightLight">If you can upload documents into this section, tick YES. If you cannot, please tick NO – make sure to
+                    upload, email or drop these documents into the agency to complete the application. You can also take
+                    a clear photo from your mobile phone, load it to your computer and submit it into your online
+                    application.</p>
+            </div>
+            <div class="ui-switch-off">
+          <input type="file" class="js-file" id="file"/>
+            </div>
+            </div>
+
+            <div class="section">
+
+                <h3>REFERENCE 2:</h3>
+
+                <div class="form-row fn-clear">
+                    <label class="form-row-cell ">
+                        <span>First Name</span>
+                        <input type="text" class="input icon-name">
+                    </label>
+
+                    <label class="form-row-cell ">
+                        <span>Last Name</span>
+                        <input type="text" class="input icon-name">
+                    </label>
+                </div>
+
+                <div class="form-row fn-clear">
+                    <label class="form-row-cell form-row-cell-len2">
+                        <span>Occupation</span>
+                        <input type="text" class="input ">
+                    </label>
+                </div>
+
+                <div class="form-row fn-clear">
+                    <label class="form-row-cell ">
+                        <span>Phone</span>
+                        <input type="text" class="input icon-phone">
+                    </label>
+
+                    <label class="form-row-cell ">
+                        <span>Email</span>
+                        <input type="text" class="input icon-email">
+                    </label>
+                </div>
+
+                <p class="hightLight">Please be advised that these references/referees must not be related to you as the applicant.</p>
+				<div class="section">
+                <h3>UPLOAD REFERENCE: <span onclick="on_Off($(this))" class="ui-switch"></span></h3>
+                
+                <div >
+            	<p class="hightLight">If you can upload documents into this section, tick YES. If you cannot, please tick NO – make sure to
+                    upload, email or drop these documents into the agency to complete the application. You can also take
+                    a clear photo from your mobile phone, load it to your computer and submit it into your online
+                    application.</p>
+            </div>
+            <div class="ui-switch-off">
+          <input type="file" class="js-file" id="file"/>
+            </div>
+                
+               </div> 
+
+            </div>
+
+
+            <div class="btns-wrap">
+                <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+                <input type="submit" class="fn-hide"/>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+    <div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              	<a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+
+<div id="dialog"></div>
+<div class="" id="dialog-privacy">
+    <h3>PRIVACY, DISCLOSURE, TERMS & CONDITIONS.</h3>
+
+    <p><a href="http://www.howtoapply.com.au" target="_blank">www.howtoapply.com.au</a> (howtoapply) is a privately owned tenancy application system residing in Australia. From this tenancy application, your personal information is to be assessed by the real estate agency that is advertising this property, in order to process your application and to make an informative decision. The information provided by you in this application may be used to conduct background checks on all tenancy databases, gather information from letting/real estate agents on past property history, receive employment information from past employers and for enquiries to references produced. The owner of this property may also receive relevant information relating to the application with regards to its processing. 
+In relation to information on deposits and bonds for this property, you may directly obtain details from the real estate agency that is advertising this property. Our company may also use these details in the application to inform you of relevant information pertaining to our systems. Your personal information can be accessed at your disposal by logging into your account on our website. You can also contact your real estate agent for any further information concerning your application and its processing. 
+Howtoapply will not be held liable for any matters such as loss, damage, delay or failure in relation to utility services/utility connections or utility providers. Real estate agents via howtoapply may decline or reject your application if it is not suitable, and we are not legally obliged to provide a reason. In agreeing to these terms, you declare that all information submitted is true and correct, and is not false or misleading. If you would like to proceed with your tenancy application, please agree to these terms. Thank you.
+</p>
+
+    <div class="btns-wrap fn-clear">
+        <span class="btn fn-left" id="privacy-dialog-btn"><span>YES, I AGREE TO THESE TERMS</span></span>
+        <span class="btn btn-red fn-right" id="privacy-dialog-btn-no"><span>I DO NOT AGREE, PLEASE DELETE MY APPLICATION.
+</span></span>
+    </div>
+</div>
+<script>
+function showPrivacyDialog () {
+    $('#dialog').show();
+    $('#dialog').css('height',document.body.clientHeight + 'px');
+    $('#dialog-privacy').show();
+    $('#dialog-privacy').css('left', (document.body.clientWidth-800)/2+'px');
+    $('#dialog-privacy').css('top', $(document).scrollTop()+ 100 +'px');
+}
+
+function hidePrivacyDialog () {
+    $('#dialog-privacy').hide();
+    $('#dialog').hide();
+}
+$('#form-main').submit(function(e){
+    if(!$('#dialog').is(':visible')){
+    e.preventDefault();
+    showPrivacyDialog();
+	}
+    
+});
+
+$('#privacy-dialog-btn').click(function(){
+   $('#form-main').submit();
+});
+
+$('#privacy-dialog-btn-no').click(function(){
+    alert('no!');
+	hidePrivacyDialog();
+});
+
+</script>
+</body>
+</html>

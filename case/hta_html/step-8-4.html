@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-8-4 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/kendo.min.css"/>
+        <script src="js/jQuery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/kendo.core.min.js"></script>
+        <script src="js/kendo.upload.min.js"></script>
+        <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+<div class="pHead">
+    <div class="pHead-inner">
+        <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+        <div class="head-nav">
+            <span class="item" style="width:360px;"></span>
+            <a href="login.html" class="item curr">Log Out</a>
+        </div>
+    </div>
+    <img src="imgs/x.jpg" id="head-side-img"/>
+</div>
+
+<div class="pBody">
+<h1>Tenancy Application Form</h1>
+
+<h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+<!-- ui-progress-bar -->
+<div class="ui-progress-bar" id="js-progress-bar">
+    <ul>
+        <li class="ui-progress-passed">1) <a href="step-8.html">PERSONAL DETAILS</a></li>
+        <li class="ui-progress-passed">2) <a href="step-8-2.html">LEASE DETAILS </a></li>
+        <li class="ui-progress-passed">3) <a href="step-8-3.html">PROPERTY HISTORY</a></li>
+        <li class="ui-progress-passed ui-progress-bar-curr">4) <a href="step-8-4.html">EMPLOYMENT INFORMATION </a></li>
+        <li class="ui-progress-passed ui-progress-bar-flag">5) <a href="step-8-5.html">REFERENCES</a></li>
+        <li>6) CONNECTION SERVICES</li>
+    </ul>
+    <div class="ui-progress-bar-rule"></div>
+</div>
+<!-- // -->
+
+
+<p class="hightLight">This section covers the information needed in order to show financial stability.</p>
+
+<h3>At present you are:</h3>
+
+
+<div class="form-row fn-clear">
+
+    <div class="ui-toggleButton" id="control-forms-select">
+        <ul>
+            <li class="ui-toggleButton-curr" data-value="1"><span>Currently Employed</span></li>
+            <li data-value="2"><span>Self Employed</span></li>
+            <li data-value="3"><span>Student</span></li>
+            <li data-value="4"><span>Unemployed</span></li>
+        </ul>
+    </div>
+    <input type="hidden" value="" name=""/>
+
+</div>
+
+<div id="form-1">
+    <form action="step-8-5.html" method="post">
+        <div class="form-row fn-clear">
+
+            <label class="form-row-cell ">
+                <span>Job Position/Title</span>
+                <input type="text" class="input">
+            </label>
+
+
+            <label class="form-row-cell ">
+                <span>Company Name</span>
+                <input type="text" class="input ">
+            </label>
+
+        </div>
+
+        <div class="form-row fn-clear">
+
+            <label class="form-row-cell form-row-cell-len2">
+                <span>Company Address</span>
+                <input type="text" class="input">
+            </label>
+
+
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell ">
+                <span>Company Phone Number</span>
+                <input type="text" class="input">
+            </label>
+            <label class="form-row-cell ">
+                <span>Company Email Address</span>
+                <input type="text" class="input  ">
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell ">
+                <span>Company Fax Number</span>
+                <input type="text" class="input">
+            </label>
+            <label class="form-row-cell ">
+                <span>Length of Employment</span>
+                <input type="text" class="input  ">
+            </label>
+        </div>
+        <div class="form-row fn-clear">
+            <label class="form-row-cell ">
+                <span>Work hours per week</span>
+                <input type="text" class="input">
+            </label>
+            <label class="form-row-cell ">
+                <span>Net Income (After Tax) Weekly</span>
+                <input type="text" class="input  ">
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <span class="form-row-title">Employment Status</span>
+            <label class="ui-radio"> <input type="radio" name="x1"/> Full Time </label>
+            <label class="ui-radio"> <input type="radio" name="x1"/> Part Time </label>
+            <label class="ui-radio"> <input type="radio" name="x1"/> Casual </label>
+
+        </div>
+
+        <div class="section">
+            <h3>UPLOAD PROOF OF INCOME:<span class="ui-switch" onclick="on_Off($(this))"></span></h3>
+            <div>
+            	<p class="hightLight">If you can upload documents into this section, tick YES. If you cannot, please tick NO – make sure to
+                    upload, email or drop these documents into the agency to complete the application. You can also take
+                    a clear photo from your mobile phone, load it to your computer and submit it into your online
+                    application.</p>
+            </div>
+            <div class="ui-switch-off">
+           	<p class="hightLight">Since you are currently employed, you must attach ONE of the following:</p>
+            <p class="hightLight">
+                2-3 of your most recent payslips  OR <br/>
+                Employment contract  OR<br/>
+                Bank statement showing wages/income  OR<br/>
+                Signed letter from employer with their contact details, your job details and your net income (after tax)
+                per week.
+            </p>
+            <input type="file" class="js-file" />
+            </div>
+
+
+        </div>
+
+
+        <div class="btns-wrap">
+            <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+            <input type="submit" class="fn-hide"/>
+        </div>
+
+    </form>
+
+</div>
+<div id="form-2" class="fn-hide">
+    <form method="post" action="step-8-5.html">
+        <div class="form-row fn-clear">
+            <label class="form-row-cell">
+                <span>Business Name</span>
+                <input type="text" class="input"/>
+            </label>
+            <label class="form-row-cell">
+                <span>Business Type</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell form-row-cell-len2">
+                <span>Business Address</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell">
+                <span>Business Phone Number</span>
+                <input type="text" class="input"/>
+            </label>
+            <label class="form-row-cell ">
+                <span>Business Email Address</span>
+                <input type="text" class="input  ">
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell ">
+                <span>Business Fax Number</span>
+                <input type="text" class="input">
+            </label>
+            <label class="form-row-cell">
+                <span>Length of Employment</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell">
+                <span>Work hours per week</span>
+                <input type="text" class="input"/>
+            </label>
+            <label class="form-row-cell">
+                <span>Net Income (After Tax) Weekly</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell">
+                <span>Accountant's Phone Number</span>
+                <input type="text" class="input"/>
+            </label>
+            <label class="form-row-cell">
+                <span>Accountant's Email Address</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+        <div class="form-row fn-clear">
+        <label class="form-row-cell">
+                <span>Accountant's Fax Number</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+        <div class="section">
+            <h3>UPLOAD PROOF OF EMPLOYMENT <span onclick="on_Off($(this))" class="ui-switch"></span></h3>
+            
+             <div>
+            	<p>If you can upload documents into this section, tick YES. If you cannot, please tick NO – make sure to
+                    upload, email or drop these documents into the agency to complete the application. You can also take
+                    a clear photo from your mobile phone, load it to your computer and submit it into your online
+                    application.</p>
+            </div>
+            <div class="ui-switch-off">
+           
+           <p class="hightLight">Since you are currently self employed, you must attach ONE of the following:</p>
+
+            <p>
+                Bank statement showing deposited income OR <br/>
+                Letter from your accountant with your business details OR <br/>
+                Letter from your Solicitor with your business details.
+            </p>
+            <input type="file" class="js-file" />
+            </div>
+        </div>
+
+        <div class="btns-wrap">
+            <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+            <input type="submit" class="fn-hide"/>
+        </div>
+    </form>
+</div>
+<div id="form-3" class="fn-hide">
+    <form method="post" action="step-8-5.html">
+        <div class="form-row fn-clear">
+            <label class="form-row-cell form-row-cell-len2">
+                <span>Name of Educational/Study Institution</span>
+                <input type="text" class="input"/>
+            </label>
+
+        </div>
+
+        <div class="form-row fn-clear">
+            <label class="form-row-cell">
+                <span>Name of Course</span>
+                <input type="text" class="input"/>
+            </label>
+
+            <label class="form-row-cell">
+                <span>Length of Course (Years)</span>
+                <input type="text" class="input"/>
+            </label>
+        </div>
+
+
+
+        <div class="form-row fn-clear">
+        <h3>Do you receive Government Assistance: <span onclick="on_Off($(this))" class="ui-switch"></span></h3>
+        <div></div>
+             <div class="ui-switch-off">
+           <p class="hightLight">Please type in the following:</p>
+             <label class="form-row-cell">
+                <span>Type of Payment</span>
+                <input type="text" class="input"/>
+            </label>
+
+            <label class="form-row-cell">
+                <span>Frequency of Payment               </span>
+                <input type="text" class="input"/>
+            </label>
+              <label class="form-row-cell">
+                <span>Amount of Payment         </span>
+                <input type="text" class="input"/>
+            </label>
+            </div>
+        </div>
+
+        
+		
+		
+        <div class="section">
+            <h3>Upload Proof Of Income: <span onclick="on_Off($(this))" class="ui-switch"></span></h3>
+            
+             <div>
+            	<p>If you are receiving government support, parental support or any other source of income, please makes sure to attach all documents in full. Also state the frequency of these payments and show bank statements to confirm if possible.</p>
+            </div>
+            <div class="ui-switch-off">
+           <p class="hightLight">Since you are a student you must attach at least one of the following:
+</p>
+
+            <p class="hightLight">
+            Bank statement or term deposit showing funds	&nbsp;&nbsp;&nbsp;	and/or<br>
+            Govement assistance documents			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and/or<br>
+            Any other relevant documents (eg – parental support).
+          
+            </p>
+            <input type="file" class="js-file" />
+            </div>
+
+            
+        </div>
+
+        <div class="btns-wrap">
+            <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+            <input type="submit" class="fn-hide"/>
+        </div>
+    </form>
+    </div>
+    <div id="form-4" class="fn-hide">
+        <form method="post" action="step-8-5.html">
+<p class="hightLight">If you are paying the rent yourself or sharing with someone else, you must upload your proof of financial stability below. For example, you can add any benefits you are receiving (Centrelink, single parent allowances, disability pension, redundancy). You can also add in your bank statements (savings) to show that you can afford the rent. You can also enter your personal situation into the text box below. Please limit it to two paragraphs.</p>
+<textarea style="width:500px; height:50px; margin:15px 0 30px;"></textarea>
+           <h3>UPLOAD DOCUMENTS</h3>
+          
+          <input type="file" class="js-file" id="file"/>
+
+            <div class="btns-wrap">
+            <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+            <input type="submit" class="fn-hide"/>
+        </div>
+           
+        </form>
+    </div>
+</div>
+
+
+</div>
+
+<div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              	<a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+
+<script>
+    $(function () {
+        $('#control-forms-select li').click(function () {
+            var i = $(this).attr('data-value');
+
+            $(this).siblings().each(function () {
+                $(this).removeClass('ui-toggleButton-curr');
+                $('#form-' + $(this).attr('data-value')).hide();
+            });
+
+            $(this).addClass('ui-toggleButton-curr');
+            $('#form-' + $(this).attr('data-value')).show();
+        });
+
+    });
+</script>
+</body>
+</html>

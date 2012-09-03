@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-8-2 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="Stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/kendo.min.css"/>
+        <script src="js/jQuery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/kendo.core.min.js"></script>
+        <script src="js/kendo.upload.min.js"></script>
+        <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Tenancy Application Form</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+         <!-- ui-progress-bar -->
+<div class="ui-progress-bar" id="js-progress-bar">
+    <ul>
+        <li class="ui-progress-passed">1) <a href="step-8.html">PERSONAL DETAILS</a></li>
+        <li class="ui-progress-bar-curr ui-progress-bar-flag">2) LEASE DETAILS </li>
+        <li >3) PROPERTY HISTORY</li>
+        <li >4) EMPLOYMENT INFORMATION </li>
+        <li>5) REFERENCES</li>
+        <li>6) SERVICES</li>
+    </ul>
+    <div class="ui-progress-bar-rule"></div>
+</div>
+<!-- // -->
+
+        <form action="step-8-3.html" method="post">
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Available Date / Start Date</span>
+                    <input id="start" type="text" class="input icon-calendar">
+                </label>
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Length of lease</span>
+                    <input type="text" class="input icon-document">
+                </label>
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Rent $ Per Week</span>
+                    <input type="text" class="input icon-doller">
+                </label>
+
+            </div>
+
+            <div class="fn-clear">
+                <div class="form-row" style="float:left; width:330px; margin-right:80px;">
+                    <span class="form-row-title">Number of Children (<span id="child-num-panel">0</span> ) 
+                    <a id="control-noChild" href="?">No child?</a></span>
+
+                    <ul class="ui-childIcons fn-clear">
+                       <li title="1"></li><!-- class="ui-childIcons-on"-->
+                       <li title="2"></li>
+                       <li title="3"></li>
+                       <li title="4"></li>
+                       <li title="5"></li>
+                       <li title="6"></li>
+                       <li title="7"></li>
+                       <li title="8"></li>
+                    </ul>
+
+                    <table class="ui-table">
+                       <thead>
+                          <tr>
+                            <th width="15">#</th>
+                            <th>Gender</th>
+                            <th width="100">Age</th>
+                          </tr>
+                       </thead>
+                       <tbody id="childFrom">
+                          
+                          
+                       </tbody>
+                    </table>
+
+                    
+                </div>
+
+                <div class="form-row" style="float:left; width:330px;">
+                    <span class="form-row-title">Number of Pets (<span id="pet-num-panel">0</span>)
+                    <a id="control-noPet" href="?">No Pet?</a>
+                    </span>
+
+                    <ul class="ui-petIcons fn-clear">
+                       <li title="1"></li>
+                       <li title="2"></li>
+                       <li title="3"></li>
+                       <li title="4"></li>
+                       <li title="5"></li>
+                       <li title="6"></li>
+                       <li title="7"></li>
+                       <li title="8"></li>
+                    </ul>
+
+                    <table class="ui-table">
+                       <thead>
+                          <tr>
+                            <th width="15">#</th>
+                            <th>Type</th>
+                            <th>Weight (Dog only)</th>
+                            <th width="100">Specify Type</th>
+                          </tr>
+                       </thead>
+                       <tbody id="petFrom">
+                          
+                       </tbody>
+                    </table>
+
+                    
+                </div>
+
+            </div>
+
+
+
+           
+            <p class="hightLight">Please refer to the property advertisement in order to retrieve any extra information needed.</p>
+
+            <div class="btns-wrap">
+                <span class="btn js-clikeNext"><span>SAVE & NEXT </span></span>
+                <input type="submit" class="fn-hide"/>
+            </div>
+
+        </form>
+
+
+    </div>
+
+  
+</div>
+  <div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              	<a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+
+<div style="display:none">
+    <table id="template-table">
+        <tr>
+            <td>{i}</td>
+            <td>
+            <label class="ui-radio"> <input type="radio" value="" name="sex{i}" /> Boy</label>
+            <label class="ui-radio"> <input type="radio" value="" name="sex{i}" /> Girl</label>
+            </td>
+            <td>
+                <select name="age{i}">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18+</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>{i}</td>
+            <td>
+            <select name="petType{i}">
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Other</option>
+            </select>
+            </td>
+            <td>
+                <select name="petWeight{i}">
+                <option>0-5KG</option>
+                <option>5-10KG </option>
+                <option>10-15KG</option>
+                <option>15+KG</option>
+                </select>
+            </td>
+            <td><input type="text" name="petNote{i}" style="width:70px;" /></td>
+         </tr>
+    </table>
+</div>
+<script>
+	//select children and pets number
+	
+	$('.ui-childIcons li').click(function(){
+        var index=$(this).index();
+
+        $(this).nextAll().removeClass('ui-childIcons-on');
+        $(this).prevAll().andSelf().addClass('ui-childIcons-on');
+
+		
+        setChildRows(index+1);
+	});
+
+	$('.ui-petIcons li').click(function(){
+        var index=$(this).index();
+
+        $(this).nextAll().removeClass('ui-petIcons-on');
+        $(this).prevAll().andSelf().addClass('ui-petIcons-on');
+        setPetRows(index+1);
+        
+	})
+
+    $('#control-noChild').click(function(e){
+        e.preventDefault();
+        $('.ui-childIcons li').removeClass('ui-childIcons-on');
+        setChildRows(0);
+    });
+
+    $('#control-noPet').click(function(e){
+        e.preventDefault();
+        $('.ui-petIcons li').removeClass('ui-petIcons-on');
+        setPetRows(0);
+    });
+
+function setChildRows (i) {
+	
+        $('#child-num-panel').text(i);
+        if(i==0){
+           $('#childFrom tr').remove();
+           return;
+        }
+
+        $('#childFrom tr').eq(i-1).nextAll().remove();
+        
+        var html = '', t='';
+
+        if($('#childFrom tr').length < i){
+			
+			for(var j=$('#childFrom tr').length; j < i; j++){
+                t='<tr>'+$('#template-table tr').eq(0).html()+'</tr>';
+                html+=t.replace(/{i}/ig, j+1);
+			}
+			$('#childFrom').append(html);
+		}
+        
+
+        
+        
+    }
+function setPetRows (i) {
+
+        $('#pet-num-panel').text(i);
+
+        if(i==0){
+           $('#petFrom tr').remove();
+           return;
+        }
+        
+        $('#petFrom tr').eq(i-1).nextAll().remove();
+        
+		if($('#petFrom tr').length < i){
+			html = '';
+			for(var j=$('#petFrom tr').length; j < i; j++){
+				t='<tr>'+$('#template-table tr').eq(1).html()+'</tr>';
+                html+=t.replace(/{i}/ig, j+1);
+			}
+			$('#petFrom').append(html);
+		}	
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-8-3 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/kendo.min.css"/>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/kendo.core.min.js"></script>
+    <script src="js/kendo.upload.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"><img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Tenancy Application Form</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <!-- ui-progress-bar -->
+<div class="ui-progress-bar" id="js-progress-bar">
+    <ul>
+        <li class="ui-progress-passed">1) <a href="step-8.html">PERSONAL DETAILS</a></li>
+         <li class="ui-progress-passed">2) <a href="step-8-2.html">LEASE DETAILS </a></li>
+        <li  class="ui-progress-bar-curr ui-progress-bar-flag">3) PROPERTY HISTORY</li>
+        <li >4) EMPLOYMENT INFORMATION </li>
+        <li>5) REFERENCES</li>
+        <li>6) CONNECTION SERVICES</li>
+    </ul>
+    <div class="ui-progress-bar-rule"></div>
+</div>
+<!-- // -->
+
+
+        <form action="step-8-4.html" method="post">
+
+            <h3>CURRENT PROPERTY DETAILS -</h3>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Current Address</span>
+                    <input type="text" class="input icon-address">
+                </label>
+            </div>
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Suburb</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+            <div class="form-row fn-clear addbox" >
+
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>CITY/STATE</span>
+                    <select class="input">
+                        <option> - select -</option> <!-- (to show states in Australia as defaulted)-->
+                        <option value="QLD"> - QLD -</option>
+                        <option value="NSW"> - NSW -</option>
+                        <option value="VIC"> - VIC -</option>
+                        <option value="SA"> - SA -</option>
+                        <option value="WA"> - WA -</option>
+                        <option value="TAS"> - TAS -</option>
+                        <option value="NT"> - NT -</option>
+                        <option value="ACT"> - ACT -</option>
+                    </select>
+                </label>
+                
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>POSTCODE</span>
+                    <input type="text" class="input ">
+                </label>
+
+                
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>COUNTRY</span>
+                    <select class="input">
+                    <!-- this will be defaulted as Australia (for .com.au website), New Zealand (for.co.nz website) and so on (we will change this between countries).
+Can you please enter these drop down menus (find some online and enter please). -->
+						<option value="Australia"> - Australia -</option>
+                    </select>
+                </label>                
+
+
+            </div>
+			<div class="form-row fn-clear" >
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Overseas Address? (Please type in entire address here if applicable)</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Name of Agent or Owner</span>
+                    <input type="text" class="input icon-name">
+                </label>
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Phone</span>
+                    <input type="text" class="input icon-phone">
+                </label>
+                
+                
+
+            </div>
+
+            <div class="form-row fn-clear">
+
+            <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Email</span>
+                    <input type="text" class="input icon-email ">
+                </label>
+
+                
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Fax</span>
+                    <input type="text" class="input icon-fax ">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                
+               
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Rent $ Per Week</span>
+                    <input type="text" class="input icon-doller">
+                </label>
+                
+                <span class="form-row-cell form-row-cell-len2">
+                    <span>Length of Stay</span>
+                    <select id="currentProperty-year">
+                        <option  value=""> - select - </option> 
+                        <option  value="0">0</option> 
+                        <option value="1">1</option> 
+                        <option  value="2">2</option> 
+                        <option  value="3">3</option>
+                        <option  value="3">4</option>
+                        <option  value="3">5</option>
+                        <option  value="3">6</option>
+                        <option  value="3">7</option>
+                        <option  value="3">8</option>
+                        <option  value="3">9</option>
+                        <option  value="5">10</option>
+                        <option  value="10+">10+</option>
+                    </select> Years, 
+
+                    <select>
+                        <option> - select - </option> 
+                        <option>0</option> 
+                        <option>1</option> 
+                        <option>2</option> 
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                    </select> Months
+                 </span>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Reason for leaving</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+            <div class="section">
+                <h3>PREVIOUS PROPERTY DETAILS (IF APPLICABLE): <span id="control-previousProperty" class="ui-switch" onclick="on_Off($(this))"></span></h3>
+                   <div><p class="hightLight">If you have stayed in a property for over 12 months, there is no need to fill in this previous property details section.</p></div>
+                   <div class="ui-switch-off">
+                     <p><b class="red">*</b>Since you have been at your current address for less than 12 months, please fill out your previous address details (last rental property, own home or family home for example). Thank You.</p>
+                   </div>
+                   
+                     
+<div id="previous-property-detail">
+               <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Previous  Address</span>
+                    <input type="text" class="input icon-address">
+                </label>
+            </div>
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Suburb</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+            <div class="form-row fn-clear addbox" >
+
+  
+                
+                   
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>CITY/STATE</span>
+                    <select class="input">
+                        <option> - select -</option> <!-- (to show states in Australia as defaulted)-->
+                        <option value="QLD"> - QLD -</option>
+                        <option value="NSW"> - NSW -</option>
+                        <option value="VIC"> - VIC -</option>
+                        <option value="SA"> - SA -</option>
+                        <option value="WA"> - WA -</option>
+                        <option value="TAS"> - TAS -</option>
+                        <option value="NT"> - NT -</option>
+                        <option value="ACT"> - ACT -</option>
+                    </select>
+                </label>
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>POSTCODE</span>
+                    <input type="text" class="input ">
+                </label>
+
+                           
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>COUNTRY</span>
+                    <select class="input">
+                    <!-- this will be defaulted as Australia (for .com.au website), New Zealand (for.co.nz website) and so on (we will change this between countries).
+Can you please enter these drop down menus (find some online and enter please). -->
+						<option value="Australia"> - Australia -</option>
+                    </select>
+                </label>
+
+            </div>
+			<div class="form-row fn-clear" >
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Overseas Address? (Please type in entire address here if applicable)</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Name of Agent or Owner</span>
+                    <input type="text" class="input icon-name">
+                </label>
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Phone</span>
+                    <input type="text" class="input icon-phone">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Email</span>
+                    <input type="text" class="input icon-email ">
+                </label>
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Agent/Owner Fax</span>
+                    <input type="text" class="input icon-fax ">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                
+               
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Rent $ Per Week</span>
+                    <input type="text" class="input icon-doller">
+                </label>
+                
+                <span class="form-row-cell form-row-cell-len2">
+                    <span>Length of Stay</span>
+                    <select>
+                        <option> - select - </option> 
+                         <option>0</option> 
+                          <option>1</option> 
+                           <option>2</option> 
+                            <option>3</option>
+                            <option>...</option>
+                            <option>10</option>
+
+                    </select> Years, 
+
+                    <select>
+                        <option> - select - </option> 
+                         <option>0</option> 
+                          <option>1</option> 
+                           <option>2</option> 
+                            <option>3</option>
+                            <option>...</option>
+                            <option>11</option>
+
+                    </select> Months
+                 </span>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len2">
+                    <span>Reason for leaving</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+
+
+            </div>
+</div>
+            <div class="section">
+                <h3>UPLOAD LETTER FOR RENTAL HISTORY: <span class="ui-switch" onclick="on_Off($(this))"></span></h3>
+				<div>
+                	<p class="hightLight">If you organise and attach a letter from your agent/property manager or property owner for your rental history above, it will speed up the application process. We will no longer need to send off a rental reference form.</p>
+                </div>
+
+				<div class="ui-switch-off"><input type="file" class="js-file" id="file"/></div>
+
+            </div>
+
+            <div class="section">
+                <u id="agree" class="hightLight"><input type="checkbox"/> I AGREE TO THE TERMS</u>
+
+                <p class="hightLight">In relation to the above agreement, we need you to agree to these terms so we can fax off your rental references and conduct a background check via TICA. If you do not agree, the agency cannot complete your application and they will not be able to approve it. You are also not permitted to move onto the next step of this application form.</p>
+            </div>
+
+
+            <div class="btns-wrap">
+                <span class="btn" id="control-nextPage"><span>SAVE & NEXT </span></span>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+
+    <div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              	<a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+<div id="dialog"></div>
+<div class="" id="dialog-privacy">
+    <h3>PIVACY ACT ACKNOWLEDGEMENT FOR TENANTS:</h3>
+
+    <p>In accordance with privacy principle 1.3 of the Privacy Act we require you to read and sign this acknowledgement.
+        I the said applicant declare that I give my permission to the agent to collect my information and pass such
+        information onto TICA Default Tenancy Control Pty Ltd. I further give my permission for my information to be
+        provided to any other tenancy database for the assessment of my tenancy application. I further give consent to
+        the Agency to contact any of my referees provided by me in my tenancy application. I agree and understand that
+        once a tenancy application has been lodged with a member of a tenancy database and an inquiry made with tenancy
+        database my information may be recorded as making an inquiry. I understand that TICA Default Tenancy Control Pty
+        Ltd is a database company that allows its members access to information accumulated from members about tenants
+        who have breached their tenancy agreements. I agree and understand that should I fail to provide the database
+        member with the information and acknowledgements required the Agency may elect not to proceed with my tenancy
+        application. I acknowledge and understand that TICA Default Tenancy Control Pty Ltd can be contacted on 190 222
+        0346. I agree that the calls to TICA Default Tenancy Control Pty Ltd are charged at $5.45 per minute inclusive
+        of GST.</p>
+
+    <div class="btns-wrap fn-clear">
+        <span class="btn fn-left" id="privacy-dialog-btn"><span>YES, I AGREE TO THE ABOVE TERMS</span></span>
+        <span class="btn btn-red fn-right" id="privacy-dialog-btn-no"><span>NO, I DO NOT AGREE TO THE ABOVE TERMS</span></span>
+    </div>
+</div>
+<script>
+    $(function(){
+       
+
+
+    });
+
+
+step_8_3();
+
+function showPrivacyDialog () {
+    $('#dialog').show();
+    $('#dialog').css('height',document.body.clientHeight + 'px');
+    $('#dialog-privacy').show();
+    $('#dialog-privacy').css('left', (document.body.clientWidth-800)/2+'px');
+    $('#dialog-privacy').css('top', $(document).scrollTop()+ 100 +'px');
+}
+
+function hidePrivacyDialog () {
+    $('#dialog-privacy').hide();
+    $('#dialog').hide();
+}
+
+
+
+</script>
+</body>
+</html>

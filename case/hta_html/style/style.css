@@ -1,0 +1,93 @@
+﻿@charset "utf-8";/* CSS Document */
+body { font-size:12px; margin:0 auto; font-family:"Microsoft YaHei"; background-color:#f7f7f7; }
+div, ul, li, h1, h2, h3, h4, h5, h6, th, td { }
+ol, ul { list-style:none }
+img{ border:none;}
+a { text-decoration:none; }
+.fix { clear:both }
+/************头部************/
+.top { width: 991px; margin:0 auto; }
+.top .logo { margin-top: 18px; display: inline; float: left; }
+.top .title { margin-top: 16px; display: inline; float: right; }
+.top .topmenu { margin-top: 13px; display: inline; float: left; height: 56px; width: 991px; background-image:url(../images/topmenubg.png); background-repeat:no-repeat; }
+.top .topmenu .nav { width: 991px; height: 56px; margin:0; padding:0; }
+.top .topmenu .nav li{ float:left;}
+.top .topmenu .nav a { float:left; cursor:pointer; height:56px;}
+.top .topmenu .nav .p1 a { padding:0px 84px; }
+.top .topmenu .nav .p2 a { padding:0px 116px; }
+.top .topmenu .nav .p3 a { padding:0px 137px; }
+.top .topmenu .nav .p4 a { padding:0px 158px; }
+.top .topmenu .nav .p1 a:hover { background-image:url(../images/topmenubg.png); background-position:0 -56px; }
+.top .topmenu .nav .p2 a:hover { background-image:url(../images/topmenubg.png); background-position:-168px -56px; }
+.top .topmenu .nav .p3 a:hover { background-image:url(../images/topmenubg.png); background-position:-400px -56px; }
+.top .topmenu .nav .p4 a:hover { background-image:url(../images/topmenubg.png); background-position:-674px -56px; }
+/************中部************/
+.center { width:991px; height: auto; margin:0 auto; }
+.center .centerTop { width:991px; height:auto; margin:26px 0; float: left; }
+.center .centerTop .step { width:541px; height:300px; float:left; }
+.center .centerTop .step ul { margin-left:-30px; }
+*+html .center .centerTop .step ul { margin-left:10px; margin-top:10px; }
+.center .centerTop .step ul li { padding-left:147px; padding-top:12px; height:54px; margin-bottom:26px; background-repeat:no-repeat; }
+.center .centerTop .step .step1 { background-image:url(../images/step1.png); }
+.center .centerTop .step .step2 { background-image:url(../images/step2.png); }
+.center .centerTop .step .step3 { background-image:url(../images/step3.png); }
+.center .centerTop .step ul li a { color:#3eb5dd; float:left; clear:left; font-size:16px; font-weight:bold; }
+.center .centerTop .step ul li span { width:300px; color:#818489; float:left; clear:left; font-size:14px; font-weight:bold; }
+.center .centerTop .video { width:450px; height:300px; float:left; }
+.hr { width:100%; height:7px; clear:both; background-color:#1694e3; }
+.center .centerMedium { width:991px; margin:26px 0; float: left; }
+.center .centerMedium .content { float:left; margin-top:10px; width:517px; }
+.center .centerMedium .img { float:right; margin:40px 12px 0 0; width:400px; text-align:right; }
+.center .centerMedium .img p { margin:16px 15px 0 0; color:#5a5d64; }
+.center .centerBottom { width:991px; float: left; text-align:center; }
+.center .centerBottom img { margin:30px 0; }
+/* web002 */
+.top .follow { float:right;}
+.center .t3 { margin:0 0 26px 10px; font-size:15px; color:#6a6a6a; font-weight:bold; }
+.center .t4 { margin:0 0 6px 10px; font-size:15px; color:#a8a8a8; font-weight:bold; }
+.center .centerBottom .status { float:left; text-align:left; width:800px; margin-left:60px; margin-bottom:60px; font-size:20px; font-weight:bold; color:#3b3b3b; font-family:Arial, Helvetica, sans-serif;}
+.center .centerBottom ul.status li { float:left; line-height:86px; width:100%; background:url(../images/circle.png) right no-repeat;} 
+.center .centerBottom ul.status li span { margin-left:126px; color:#1694e3; font-size:18px; }
+/* web003 */
+.center .t2 { margin:0 0 26px 0; font-size:20px; font-weight:bold; color:#535353; }
+.center .centerTop .join_us { margin:0 auto; text-align:center; }
+.center .centerTop .join_us a { margin:0 12px; }
+.center .centerMedium .form { margin:0 auto; text-align:right; margin-right:120px; width:auto; }
+form input.text-input, form select, form textarea, form .wysiwyg { padding: 10px; font-size: 18px; background: #1694e3; border-top: 2px ridge #b8b8b8; border-right: 2px groove #ddd; border-bottom: 2px groove #ddd; border-left: 2px ridge #b8b8b8; color:#fff; margin-bottom:12px; overflow:hidden; }
+form .small-input { width:25% !important; }
+form .medium-input { width:66% !important; }
+form textarea { width:66% !important; font-family:Arial, Helvetica, sans-serif; }
+form select { padding:4px; background:#fff; }
+form .button1 { float:right; margin:6px 0 18px 0; }
+/************ 底部 ************/
+.foot { width: 991px; height: 100px; margin:0 auto; }
+.foot .blogroll { margin-top: 34px; float: left; width: auto; }
+.foot p { width:auto; float:left; margin:48px 0 0 62px; }
+.foot .img { margin:24px 0 0 62px; }
+/************ Button ************/
+.button { font-family: Verdana, Arial, sans-serif; display: inline-block; background:url('../images/submit.png'); color: #fff !important; font-size: 21px !important; border:0; width:170px; height:56px; cursor: pointer; }
+.button:hover { text-decoration: underline; }
+.button:active { padding: 6px 7px 3px 9px !important; }
+
+
+.ibuyTable{ width:920px; height:145px; margin:0 auto; display:block;}
+.ibuyTable .text{ font-size:24px; color:#5a5d64;}
+.ibuyTable .tip{ font-size:16px; color:#24c7ff;}
+.ibuyTable .split{ width:8px; height:65px; background:url(../images/ibuyTableSplit.png) no-repeat;}
+
+.buttonTable{ width:580px; height:218px; margin:0 auto;}
+.buttonTable button{ width:278px; height:124px; border:0; cursor:pointer;}
+.buttonTable .ibuyButton{}
+.buttonTable .ibuyButtonActive{ background:url(../images/ibuyButtonActive.png) no-repeat;}
+.buttonTable .irentButton{ background:url(../images/irentButton.png) no-repeat;}
+.buttonTable .irentButtonActive{}
+.submitTable{ width:905px; height:218px; margin:0 auto;}
+.submitTable .inputButton{ width:875px; height:65px; border:1px solid #dbdbdb;}
+.submitTable .inputButton{
+	border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;
+	border-top: 2px ridge #b8b8b8; border-right: 2px groove #ddd; border-bottom: 2px groove #ddd; border-left: 2px ridge #b8b8b8;
+	font-size: 20px; line-height:65px; padding: 0 10px;
+	color: #7d7d7d;
+}
+.submitTable .bookButton{ border:0; cursor:pointer;}
+.submitTable .bookButton{ width:215px; height:65px; background:url(../images/bookButton.png) no-repeat;}

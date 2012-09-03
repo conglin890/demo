@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-7 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="Stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/redmond/jquery-ui.css"/>
+
+    <link rel="stylesheet" href="css/kendo.min.css"/>
+    <script src="js/jQuery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.js"></script>
+    <script src="js/kendo.core.min.js"></script>
+    <script src="js/kendo.upload.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Tenancy application Front</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <div class="form-row fn-clear">
+            <span class="ui-people-index ui-people-index-curr ">A1 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar mini-progress-bar-curr">
+                <span>Incomplete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red">Remove Applicant</a>
+
+            <a href="step-8-2.html" style="margin:10px 0 0 10px; float:left;">Open Application Form</a>
+
+
+        </div>
+        <div class="form-row fn-clear">
+            <span class="ui-people-index">A2 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar ">
+                <span>Incomplete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red">Remove Applicant</a>
+        </div>
+        <div class="form-row fn-clear">
+            <span class="ui-people-index">A3 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar mini-progress-bar-complete">
+                <span>Complete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red">Remove Applicant</a>
+            <a href="" style="margin:10px 0 0 10px; float:left;">Click to Tick</a>
+        </div>
+
+        <a href="#" id="control-addApplicant">ADD NEW APPLICANT </a>
+
+
+    </div>
+
+    <div class="pFoot">
+        <div class="pFoot-inner">
+            <p class="foot-copyright">© 2012 iWCPS Pty. Ltd. </p>
+
+            <div class="foot-nav">
+                <a href="">Tenant FAQ</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">www.iwcps.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dialog" id="dialog-addApplicant">
+    <h3> <label><input type="radio" name="xxx" checked  /> Knows Applicant ID </label></h3>
+
+    <div class="form-row fn-clear" style="border:1px #ccc solid; padding:5px 10px; margin-left:20px;">
+        <div class="fn-left">
+            <label class="form-row-cell">
+                <span>Applicant ID</span>
+                <input type="text" class="input">
+            </label>
+
+        </div>
+    </div>
+    <h3><label><input type="radio" name="xxx"  /> Or a new Applicant? </label></h3>
+
+    <div class="form-row fn-clear" style="border:1px #ccc solid; padding:5px 10px; margin-left:20px;">
+
+        <label class="form-row-cell">
+            <span>First Name</span>
+            <input type="text" class="input">
+        </label>
+        <label class="form-row-cell">
+            <span>Last Name</span>
+            <input type="text" class="input">
+        </label>
+        <label class="form-row-cell">
+            <span>Mobile</span>
+            <input type="text" class="input">
+        </label>
+    </div>
+
+    <div class="btns-wrap">
+        <span class="btn" id="control-"><span>Submit</span></span>
+    </div>
+</div>
+
+
+</div>
+<script>
+    $('#control-addApplicant').click(function (e) {
+        e.preventDefault();
+        $('#dialog-addApplicant').dialog({
+            title:'ADD NEW APPLICANT',
+            width:560,
+            modal:true
+        });
+    });
+</script>
+</body>
+</html>

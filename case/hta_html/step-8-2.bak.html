@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-8-2 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/kendo.min.css"/>
+        <script src="js/jQuery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/kendo.core.min.js"></script>
+        <script src="js/kendo.upload.min.js"></script>
+        <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Tenancy Application Form</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <div class="ui-progress-bar" id="js-progress-bar">
+            <ul>
+                <li>A) Personal Details</li>
+                <li class="ui-progress-bar-curr">B) LEASE DETAILS</li>
+                <li>C) PROPERTY HISTORY</li>
+                <li>D) EMPLOYMENT INFORMATION</li>
+                <li>E) REFERENCES</li>
+                <li>F) CONNECTION SERVICES</li>
+            </ul>
+            <div class="ui-progress-bar-rule"></div>
+        </div>
+
+        <form action="?" method="post">
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Avaliable Date / Start Date</span>
+                    <input id="start" type="text" class="input icon-calendar">
+                </label>
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Length of lease</span>
+                    <input type="text" class="input icon-calendar">
+                </label>
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Rent $ Per Week</span>
+                    <input type="text" class="input icon-doller">
+                </label>
+
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <div class="form-row-cell form-row-cell-len2">
+                    <span>Children(specify name and age for each)</span>
+                                        <input type="text" class="input-short-side">
+                                        <input type="text" class="input-short">
+                </div>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <div class="form-row-cell form-row-cell-len2">
+                    <input type="text" class="input-short-side">
+                    <input type="text" class="input-short">
+                </div>
+            </div>
+            <div class="form-row fn-clear">
+
+                <div class="form-row-cell form-row-cell-len2">
+                                    <input type="text" class="input-short-side">
+                                    <input type="text" class="input-short">
+                                </div>
+            </div>
+            <div class="form-row" style="margin-top:-15px;">
+                <a id="addmore" href="###">Add More</a>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Pets(please list each type of pet)</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <input type="text" class="input">
+                </label>
+            </div>
+
+            <div class="form-row fn-clear">
+
+                <label class="form-row-cell form-row-cell-len4">
+                    <input type="text" class="input">
+                </label>
+            </div>
+
+            <div class="form-row" style="margin-top:-15px;">
+                <a id="aaddmore" href="###">Add More</a>
+            </div>
+
+            <p>Please refer to the property advertisement in order to retrieve any extra information needed.</p>
+
+
+            <div class="btns-wrap">
+                <span class="btn js-clikeNext"><span>NEXT</span></span>
+                <input type="submit" class="fn-hide"/>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              	<a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+</div>
+<script>
+    leaseDate();
+	addMore();
+</script>
+</body>
+</html>

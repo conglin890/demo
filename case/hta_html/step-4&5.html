@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Step-4&5 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <link rel="stylesheet" href="css/kendo.min.css"/>
+        <script src="js/jQuery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/kendo.core.min.js"></script>
+        <script src="js/kendo.upload.min.js"></script>
+        <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>Pre Application Page</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <h3>Number of applicants</h3>
+        <select id="select-applicantsNum">
+            <option value="1"> 1</option>
+            <option value="2" selected="selected" > 2</option>
+            <option value="3"> 3</option>
+            <option value="4"> 4</option>
+            <option value="5"> 5</option>
+            <option value="6"> 6</option>
+            <option value="7"> 7</option>
+            <option value="8"> 8</option>
+            <option value="9"> 9</option>
+            <option value="10"> 10</option>
+        </select>
+
+        <div class="form-row fn-clear">
+            <div class="ui-rating">
+                <span class="ui-rating-on"></span> <span class="ui-rating-on"></span> <span></span> <span></span> <span></span> <span></span>
+                <span></span> <span></span> <span></span> <span></span>
+            </div>
+        </div>
+
+        <h3>Applicant Details:</h3>
+
+        <div class="hightLight">
+
+        </div>
+        
+
+        <div class="list-applicant-details">
+
+            <div class="form-row fn-clear">
+                <span class="ui-people-index ui-people-index-on">A1</span>
+
+                <div class="fn-left" style="display:none;">
+                    <label class="form-row-cell">
+                        <span>First Name</span>
+                        <input type="text" class="input" style="display:none;"/>
+                    </label>
+                    <label class="form-row-cell">
+                        <span>Last Name</span>
+                        <input type="text" class="input" style="display:none;"/>
+                    </label>
+                    <label class="form-row-cell">
+                        <span>Mobile</span>
+                        <input type="text" class="input" style="display:none;"/>
+                    </label>
+                </div>
+
+                <div class="fn-left">
+                    <label class="form-row-cell">
+                        <span>Application ID/Applicant ID</span>
+                        <input type="text" class="input"/>
+                    </label>
+
+                    <label class="form-row-cell">
+                        <span>Password</span>
+                        <input type="text" class="input"/>
+                    </label>
+
+                    <div class="wrap-fogotID"><a href="###" id="forgotIDLink1">FORGOT YOUR APPLICANT ID?</a></div>
+
+                </div>
+
+            </div>
+
+            <div class="form-row fn-clear">
+                <span class="ui-people-index">A2</span>
+
+                <div class="fn-left">
+                    <label class="form-row-cell">
+                        <span>First Name</span>
+                        <input type="text" class="input"/>
+                    </label>
+                    <label class="form-row-cell">
+                        <span>Last Name</span>
+                        <input type="text" class="input"/>
+                    </label>
+                    <label class="form-row-cell">
+                        <span>Mobile</span>
+                        <input type="text" class="input"/>
+                    </label>
+                </div>
+
+                <div class="fn-left" style="display:none;">
+                    <label class="form-row-cell">
+                        <span>Application ID/Applicant ID</span>
+                        <input type="text" class="input" style="display:none;"/>
+                    </label>
+
+                    <label class="form-row-cell">
+                        <span>Password</span>
+                        <input type="text" class="input" style="display:none;"/>
+                    </label>
+
+                    <div class="wrap-fogotID"><a href="###" id="">FORGOT YOUR APPLICANT ID?</a></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="btns-wrap">
+            <a class="btn " href="login.html"><span>SAVE & NEXT </span></a>
+        </div>
+
+
+    </div>
+
+   
+</div>
+ <div class="pFoot">
+       <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+                <a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+
+<div id="wrap-forgotId">
+
+    <p>Please enter below to retrieve your Applicant ID and new password:</p>
+
+    <div class="form-row fn-clear">
+        <label class="form-row-cell">
+            <span>Mobile</span>
+            <input type="text" class="input icon-mobile"/>
+        </label>
+        <span class="form-row-cell-or">OR</span>
+        <label class="form-row-cell">
+            <span>Email</span>
+            <input type="text" class="input icon-email"/>
+        </label>
+
+        <span class="btn fn-left"><span>SUBMIT</span></span>
+    </div>
+
+
+</div>
+<script type="text/javascript">
+    selectNumber();
+    haveID();
+    forgotID();
+    step_4_5();
+
+</script>
+</body>
+</html>

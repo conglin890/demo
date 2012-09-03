@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Step-1 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/kendo.min.css"/>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/kendo.core.min.js"></script>
+    <script src="js/kendo.upload.min.js"></script>
+    <script src="js/common.js"></script>
+   
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>iOBS – Innovative Online Booking System</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <h3>Select your expected day and time...</h3>
+
+        <div style="width:500px; padding-left:140px; background: url(imgs/clock.jpg) 0 0 no-repeat; padding-bottom: 30px;">
+            <p>Please select a day and time to book an inspection for this property. Please note that the days and times
+                shown are the only ones available for this property. If it is not shown or you cannot click on it, then
+                an inspection cannot be arranged.
+            </p>
+
+            <p>You must book an inspection online to receive SMS and/or email notifications. You will not receive any
+                updates otherwise.</p>
+
+            <p>
+                Thank You.</p>
+        </div>
+        <form action="step-2.html" method="post">
+
+            <div class="inspection-select fn-clear">
+                <div id="date" class="inspection-select-item">
+                    <input type="hidden" value="0"/>
+                    <h4>Inspection Date</h4>
+
+                    <div class="col">
+                        <span>Tuesday,24 Jan</span>
+                        <span class="selected">Monday, 30 Jan</span>
+                        <span>Tuesday, 31 Jan</span>
+                        <span>Wednesday, 1 Feb</span>
+                        <span>Thursday, 2 Feb</span>
+                    </div>
+                </div>
+                <div id="time" class="inspection-select-item inspection-select-item-time">
+                    <input type="hidden" value="0"/>
+                    <h4>Inspection Time</h4>
+					<div class="animate_box">
+					<div class="animate_box_div">
+                    <div class="col">
+                        <span>09:00 AM - 09:15 AM</span>
+                        <span class="selected">09:30 AM - 09:45 AM</span>
+                        <span>10:00 AM - 10:15 AM</span>
+                        <span>10:30 AM - 10:45 AM</span>
+                        <span>11:00 AM - 11:15 AM</span>
+                        <span>11:30 AM - 11:45 AM</span>
+                        <span>12:00 PM - 12:15 PM</span>
+                        <span>12:30 PM - 12:45 PM</span>
+
+
+                        <span>01:00 PM - 01:15 PM</span>
+                        <span>01:30 PM - 01:45 PM</span>
+                        <span>02:00 PM - 02:15 PM</span>
+                        <span>02:30 PM - 02:45 PM</span>
+                        <span>03:00 PM - 03:15 PM</span>
+                        <span>03:30 PM - 03:45 PM</span>
+                        <span>04:00 PM - 04:15 PM</span>
+                        <span>04:30 PM - 04:45 PM</span>
+                        <span>05:00 PM - 05:15 PM</span>
+                        <span>05:30 PM - 05:45 PM</span>
+                    </div>
+                     <div class="col">
+          
+                        <span class="selected">10:30 AM - 10:45 AM</span>
+                        <span>11:00 AM - 11:15 AM</span>
+                        <span>11:30 AM - 11:45 AM</span>
+                        <span>12:00 PM - 12:15 PM</span>
+                        <span>12:30 PM - 12:45 PM</span>
+
+
+                        <span>01:00 PM - 01:15 PM</span>
+                        <span>01:30 PM - 01:45 PM</span>
+                        <span>02:00 PM - 02:15 PM</span>
+                        <span>02:30 PM - 02:45 PM</span>
+                        <span>03:00 PM - 03:15 PM</span>
+                        <span>03:30 PM - 03:45 PM</span>
+                        <span>04:00 PM - 04:15 PM</span>
+                        <span>04:30 PM - 04:45 PM</span>
+                        <span>05:00 PM - 05:15 PM</span>
+                        <span>05:30 PM - 05:45 PM</span>
+                    </div>
+                     <div class="col">
+              
+                        <span>09:30 AM - 09:45 AM</span>
+                        <span>10:00 AM - 10:15 AM</span>
+                        <span>10:30 AM - 10:45 AM</span>
+                        <span>11:00 AM - 11:15 AM</span>
+                        <span class="selected">11:30 AM - 11:45 AM</span>
+                        <span>12:00 PM - 12:15 PM</span>
+                        <span>12:30 PM - 12:45 PM</span>
+
+
+                        <span>01:00 PM - 01:15 PM</span>
+                        <span>01:30 PM - 01:45 PM</span>
+      
+                        <span>03:00 PM - 03:15 PM</span>
+                        <span>03:30 PM - 03:45 PM</span>
+                        <span>04:00 PM - 04:15 PM</span>
+                        <span>04:30 PM - 04:45 PM</span>
+                        <span>05:00 PM - 05:15 PM</span>
+                        <span>05:30 PM - 05:45 PM</span>
+                    </div>
+                     <div class="col">
+                        <span>09:30 AM - 09:45 AM</span>
+                        <span>10:00 AM - 10:15 AM</span>
+                        <span>10:30 AM - 10:45 AM</span>
+                        <span>11:00 AM - 11:15 AM</span>
+                        <span>11:30 AM - 11:45 AM</span>
+        
+                        <span>01:30 PM - 01:45 PM</span>
+                        <span>02:00 PM - 02:15 PM</span>
+                        <span>02:30 PM - 02:45 PM</span>
+                        <span class="selected">03:00 PM - 03:15 PM</span>
+                        <span>03:30 PM - 03:45 PM</span>
+                        <span>04:00 PM - 04:15 PM</span>
+                        <span>04:30 PM - 04:45 PM</span>
+                        <span>05:00 PM - 05:15 PM</span>
+                        <span>05:30 PM - 05:45 PM</span>
+                    </div>
+                     <div class="col">
+                        <span>09:30 AM - 09:45 AM</span>
+                        <span>10:00 AM - 10:15 AM</span>
+                        <span>10:30 AM - 10:45 AM</span>
+                        <span>11:00 AM - 11:15 AM</span>
+                        <span class="selected">11:30 AM - 11:45 AM</span>
+                        <span>12:00 PM - 12:15 PM</span>
+                        <span>12:30 PM - 12:45 PM</span>
+
+
+                        <span>01:00 PM - 01:15 PM</span>
+                        <span>01:30 PM - 01:45 PM</span>
+                        <span>02:00 PM - 02:15 PM</span>
+                        <span>02:30 PM - 02:45 PM</span>
+                        <span>03:00 PM - 03:15 PM</span>
+                        <span>03:30 PM - 03:45 PM</span>
+               
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <h3>Tenant Details</h3>
+
+            <div class="form-row fn-clear">
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>First Name</span>
+                    <input type="text" class="input icon-name"/>
+                </label>
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Last Name</span>
+                    <input type="text" class="input icon-name"/>
+                </label>
+            </div>
+            <div class="form-row fn-clear">
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Mobile number</span>
+                    <input type="text" class="input icon-mobile"/>
+                </label>
+                <label class="form-row-cell form-row-cell-len4">
+                    <span>Email</span>
+                    <input type="text" class="input icon-email"/>
+                </label>
+            </div>
+
+            <input type="image" src="imgs/btn-book.png"/>
+        </form>
+
+    </div>
+
+    <div class="pFoot">
+        <div class="pFoot-inner">
+            <p class="foot-copyright">© 2012 iWCPS Pty. Ltd. </p>
+
+            <div class="foot-nav">
+                <a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    selectTime();
+    
+
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> step-7 </title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="Stylesheet" href="css/jquery-ui.css"/>
+
+    <link rel="stylesheet" href="css/kendo.min.css"/>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/kendo.core.min.js"></script>
+    <script src="js/kendo.upload.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+            <div class="head-nav">
+                <span class="item" style="width:360px;"></span>
+                <a href="login.html" class="item curr">Log Out</a>
+            </div>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <h1>How to Apply Overview</h1>
+
+        <h2 class="banner-title"><span>Property address</span>Northern Brisbane, QLD</h2>
+
+        <div class="form-row fn-clear">
+            <span class="ui-people-index ui-people-index-curr ">A1 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar mini-progress-bar-curr">
+                <span>Incomplete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red control-remove">Remove Applicant</a>
+
+            <a href="step-8.html" style="margin:10px 0 0 10px; float:left;">Open Application Form</a>
+
+
+        </div>
+        <div class="form-row fn-clear">
+            <span class="ui-people-index ">A2 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar ">
+                <span>Incomplete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red control-remove">Remove Applicant</a>
+        </div>
+        <div class="form-row fn-clear">
+            <span class="ui-people-index ui-people-index-completed">A3 <em>Johm Smith</em></span>
+
+            <div class="mini-progress-bar mini-progress-bar-complete">
+                <span>Complete</span>
+
+                <div class="mini-progress-bar-inner"><i>&nbsp;</i></div>
+            </div>
+            <a href="xxx" style="margin:10px 0 0 10px; float:left;" class="red control-remove">Remove Applicant</a>
+        </div>
+
+        <a href="#" id="control-addApplicant">ADD NEW APPLICANT </a>
+
+
+    </div>
+
+   
+</div>
+ <div class="pFoot">
+        <div class="pFoot-inner">
+            <p class="foot-copyright">© 2012 iWCPS Pty. Ltd. </p>
+
+            <div class="foot-nav">
+                <a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+            </div>
+        </div>
+    </div>
+<div class="dialog" id="dialog-addApplicant">
+    <div class="form-row fn-clear">
+
+        <div class="ui-toggleButton" id="control-forms-select" style="margin-top:10px;">
+            <ul>
+                <li class="ui-toggleButton-curr" data-value="1"><span>Existing User</span></li>
+                <li data-value="2"><span>New User</span></li>
+
+            </ul>
+        </div>
+        <input type="hidden" value="1" name=""/>
+    </div>
+
+    <div id="form-1">
+
+        <div class="form-row fn-clear">
+            <div class="fn-left">
+                <label class="form-row-cell">
+                    <span>Applicant ID</span>
+                    <input type="text" class="input">
+                </label>
+
+                <label class="form-row-cell">
+                    <span>Password</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="form-2" class="fn-hide">
+        <div class="form-row fn-clear" >
+                <label class="form-row-cell">
+                    <span>First Name</span>
+                    <input type="text" class="input">
+                </label>
+                <label class="form-row-cell">
+                    <span>Last Name</span>
+                    <input type="text" class="input">
+                </label>
+        </div>
+        <div class="form-row fn-clear" >
+                <label class="form-row-cell">
+                    <span>Mobile</span>
+                    <input type="text" class="input">
+                </label>
+            </div>
+    </div>
+    <div class="btns-wrap">
+        <span class="btn" id="control-"><span>Submit</span></span>
+    </div>
+</div>
+
+
+</div>
+
+<div id="dialog-confirm" title="Remove Applicant?" class="fn-hide">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+    Do you wish to remove this applicant from the group application? 
+    </p>
+</div>
+
+<script>
+
+
+
+   
+    $(function () {
+
+            // add dialog
+    $('#control-addApplicant').click(function (e) {
+        e.preventDefault();
+        $('#dialog-addApplicant').dialog({
+            title:'ADD NEW APPLICANT',
+            width:560,
+            modal:true
+        });
+    });
+
+        //delete confirm
+   $('a.control-remove').click(function(e){
+       e.preventDefault();
+
+       $( "#dialog-confirm" ).dialog({
+                resizable: false,
+                width:400,
+                modal: true,
+                buttons: {
+                    "Remove": function() {
+                        alert('Remove');
+                        $( this ).dialog( "close" );
+                    },
+                    Cancel: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+            });
+
+       });
+
+
+
+    });
+
+        //tab
+    $(function () {
+        $('#control-forms-select li').click(function () {
+            var i = $(this).attr('data-value');
+
+            $(this).siblings().each(function () {
+                $(this).removeClass('ui-toggleButton-curr');
+                $('#form-' + $(this).attr('data-value')).hide();
+            });
+
+            $(this).addClass('ui-toggleButton-curr');
+            $('#form-' + $(this).attr('data-value')).show();
+
+            $('#control-forms-select').next('input').val(i);
+        });
+
+    });
+    
+</script>
+</body>
+</html>

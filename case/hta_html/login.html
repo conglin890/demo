@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> Login </title>
+    <link href="css/style.css" rel="stylesheet"/>
+     <script src="js/jQuery.min.js"></script>
+
+</head>
+<body>
+<div class="page">
+    <div class="pHead">
+        <div class="pHead-inner">
+            <a href="index.html" class="logo"> <img src="images/logo.png"/></a>
+        </div>
+        <img src="imgs/x.jpg" id="head-side-img"/>
+    </div>
+
+    <div class="pBody">
+        <div class="login-box">
+            <div class="login-box-cnt">
+                <form action="step-7.html" method="post">
+
+               
+                    <div id="form-1">
+   
+                    <div class="form-row fn-clear">
+                        <label class="form-row-cell">
+                            <span>Application ID</span>
+                            <input type="text" class="input"/>
+                        </label>
+                    </div>
+
+                    <div class="form-row fn-clear">
+                        <label class="form-row-cell">
+                            <span>Password</span>
+                            <input type="password" class="input"/>
+                        </label>
+                    </div>
+                    <input type="image" src="imgs/btn-login.png"/>
+                    </div>
+                    <div id="form-2" class="fn-hide">
+                    
+                    <div class="form-row fn-clear">
+
+                        <label class="form-row-cell">
+                            <span>Applicant ID</span>
+                            <input type="text" class="input"/>
+                        </label>
+                    </div>
+
+                   <div class="form-row fn-clear">
+                        <label class="form-row-cell">
+                            <span>Password</span>
+                            <input type="password" class="input"/>
+                        </label>
+                    </div>
+
+                    <input type="image" src="imgs/btn-login.png"/>
+                    </div>
+
+                    <div class="wrap-forgot-link">
+                        <a href="get-password-back.html">I Forgot my Applicant ID and Password</a>
+                    </div>
+                                       
+                    
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+  
+</div>
+  <div class="pFoot">
+    <div class="pFoot-inner">
+           <p class="foot-copyright">© 2012 iWCPS Pty. Ltd.  </p>
+           <div class="foot-nav">
+              <a href="">FACEBOOK</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">TWITTER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="">RSS FEEDS</a><br />
+                <a href="">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+                <a href="">About iWCPS</a>
+           </div>
+       </div>
+    </div>
+<script>
+    $(function () {
+        $('#control-loginType').click(function (e) {
+           
+           if(e.target.nodeName=='SPAN'){
+               var v=$(this).next('input');
+               var currLi=$(e.target).parent('li');
+               v.val( currLi.attr('data-value') );
+               currLi.siblings('li').removeClass('ui-toggleButton-curr');
+               currLi.addClass('ui-toggleButton-curr');
+           }
+           
+
+         });
+    });
+
+    $(function () {
+        $('#control-forms-select li').click(function () {
+            var i = $(this).attr('data-value');
+
+            $(this).siblings().each(function () {
+                $(this).removeClass('ui-toggleButton-curr');
+                $('#form-' + $(this).attr('data-value')).hide();
+            });
+
+            $(this).addClass('ui-toggleButton-curr');
+            $('#form-' + $(this).attr('data-value')).show();
+        });
+
+    });
+</script>
+</body>
+</html>
